@@ -26,7 +26,7 @@ var record = time => new Promise(async resolve => {
 })
 """
 
-def record(sec=5):
+def record(sec=7):
   # Executa o código JavaScript para gravar o áudio
   display(Javascript(RECORD))
   # Recebe o áudio gravado como resultado do JavaScript
@@ -34,14 +34,14 @@ def record(sec=5):
    # Decodifica o áudio em base64
   audio = b64decode(js_result.split(',')[1])
   # Salva o áudio em um arquivo
-  file_name = 'request_audio.wav'
-  with open(file_name, 'wb') as f:
+  file_nome = 'request_audio.wav'
+  with open(file_nome, 'wb') as f:
     f.write(audio)
   # Retorna o caminho do arquivo de áudio (pasta padrão do Google Colab)
-  return f'/content/{file_name}'
+  return f'/content/{file_nome}'
 
 # Grava o áudio do usuário por um tempo determinado (padrão 5 segundos)
-print('Ouvindo...\n')
+print('Comece a falar...\n')
 record_file = record()
 
 # Exibe o áudio gravado
