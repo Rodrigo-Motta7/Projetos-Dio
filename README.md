@@ -1,2 +1,2 @@
 # Projetos-Dio
-Projetos que faço na plataforma da Dio, pretendo colocar aqui os que não são necessários codar.
+Projetos que faço na plataforma da Dio, possuindo projetos com código e sem.
